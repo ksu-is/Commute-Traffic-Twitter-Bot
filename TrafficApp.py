@@ -40,7 +40,7 @@ def write_400():
 #set up tkinter framework (buttons, label, whatever)
 
 HEIGHT = 600
-WIDTH = 600
+WIDTH = 800
 
 root = tk.Tk()
 root.title("Atlanta Highway Incidents")
@@ -48,34 +48,38 @@ root.title("Atlanta Highway Incidents")
 canvas = tk.Canvas(root, height=HEIGHT, width=WIDTH)
 canvas.pack()
 
-background_image = tk.PhotoImage(file='blue_background.png')
+background_image = tk.PhotoImage(file='atl_night_bg.png')
 background_label = tk.Label(root, image=background_image)
 background_label.place(relwidth=1, relheight=1)
 
-#upper
-frame = tk.Frame(root, bg='#80c1ff', bd=5)
-frame.place(relx=0.5, rely=.01, relwidth=0.80, relheight=0.8, anchor='n')
+#signature
+name = tk.Label(root, text="Atlanta GDOT\nTwitter Stream\nApp By Owen")
+name.place(relx=0.07, rely=0.05, anchor="n")
 
-label = tk.Label(frame, font=('verdana', 11), text="", wraplength=450, anchor='w', justify='left')
+#upper
+frame = tk.Frame(root, bg='#003082', bd=3)
+frame.place(relx=0.5, rely=.02, relwidth=0.65, relheight=0.8, anchor='n')
+
+label = tk.Label(frame, font=('verdana', 11), text="", wraplength=500, anchor='w', justify='left')
 label.place(relwidth=1, relheight=1)
 
 #lower
-lower_frame = tk.Frame(root, bg='#80c1ff', bd=5)
-lower_frame.place(relx=0.5, rely=0.82, relwidth=0.80, relheight=0.17, anchor='n')
+lower_frame = tk.Frame(root, bg='#CF142B', bd=3)
+lower_frame.place(relx=0.5, rely=0.83, relwidth=0.65, relheight=0.15, anchor='n')
 
-button_75 = tk.Button(lower_frame, text='I-75', font=("verdana", 14), command= write_75)
+button_75 = tk.Button(lower_frame, text='I-75', font=("verdana", 14, "bold"), bg="#003082", fg="white", command= write_75)
 button_75.place(relwidth=0.20, relheight=1)
 
-button_85 = tk.Button(lower_frame, text='I-85', font=("verdana", 14), command= write_85)
+button_85 = tk.Button(lower_frame, text='I-85', font=("verdana", 14, "bold"), bg="#003082", fg="white", command= write_85)
 button_85.place(relx=.20, relwidth=0.20, relheight=1)
 
-button_285 = tk.Button(lower_frame, text='I-285', font=("verdana", 14), command= write_285)
+button_285 = tk.Button(lower_frame, text='I-285', font=("verdana", 14, "bold"), bg="#003082", fg="white", command= write_285)
 button_285.place(relx=.40, relwidth=.20, relheight=1)
 
-button_20 = tk.Button(lower_frame, text='I-20', font=("verdana", 14), command= write_20)
+button_20 = tk.Button(lower_frame, text='I-20', font=("verdana", 14, "bold"), bg="#003082", fg="white", command= write_20)
 button_20.place(relx=0.60, relwidth=0.20, relheight=1)
 
-button_400 = tk.Button(lower_frame, text="SR 400", font=("verdana", 14), command= write_400)
+button_400 = tk.Button(lower_frame, text="SR 400", font=("verdana", 14, "bold"), bg="#003082", fg="white", command= write_400)
 button_400.place(relx=0.80, relwidth=0.20, relheight=1)
 
 
