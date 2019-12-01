@@ -1,3 +1,7 @@
+#
+#  >>>   MAKE SURE YOU PIP INSTALL TWEEPY IN THE TERMINAL BEFORE RUNNING    <<<
+#
+
 import tweepy
 import keys
 import tkinter as tk
