@@ -13,10 +13,13 @@
 
 - [x] Tweepy Integration
     - [x] Study Tweepy Documentation
-    - [x] pip install Tweepy
-    - [x] write 'read tweets' function
+    - [x] pip install tweepy
+    - [x] Write 'read tweets' function
 
 - [x] Link Function to buttons and buttons to screen
+    - [x] buttons call function with each different twitter account
+    - [x] button press sends display_message to screen
+    - [x] Limit to 5 tweets
 
 - [x] Adjust Look and feel
     - [x] Style buttons to match Interstate sign
