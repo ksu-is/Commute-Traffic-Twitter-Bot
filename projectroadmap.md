@@ -25,3 +25,5 @@
     - [x] Style buttons to match Interstate sign
     - [x] Add highway background
     - [x] Adjust text size and fonts
+
+- [x] Finish Recording and upload to d2l
