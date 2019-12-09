@@ -7,6 +7,7 @@ import keys
 import tkinter as tk
 
 #authorizing the use of Twitter's API
+#draws variables from the 'keys' file
 auth = tweepy.OAuthHandler(keys.TWITTER_APP_KEY, keys.TWITTER_APP_SECRET)
 auth.set_access_token(keys.TWITTER_KEY, keys.TWITTER_SECRET)
 api = tweepy.API(auth)
@@ -41,6 +42,8 @@ def write_400():
     #message = "You've clicked on SR 400"
     label.config(text = get_tweets(api, "GDOT_SR400_ATL"))
     
+
+
 #set up tkinter framework (buttons, label, whatever)
 
 HEIGHT = 600
@@ -52,15 +55,16 @@ root.title("Atlanta Highway Incidents")
 canvas = tk.Canvas(root, height=HEIGHT, width=WIDTH)
 canvas.pack()
 
+#set background label, and set the image variable equal to the file
 background_image = tk.PhotoImage(file='atl_night_bg.png')
 background_label = tk.Label(root, image=background_image)
 background_label.place(relwidth=1, relheight=1)
 
-#signature
+#signature box, is just a label but called name. 
 name = tk.Label(root, text="Atlanta GDOT\nTwitter Stream\nApp By Owen")
 name.place(relx=0.07, rely=0.05, anchor="n")
 
-#upper
+#setting up the upper area of the app
 frame = tk.Frame(root, bg='#003082', bd=3)
 frame.place(relx=0.5, rely=.02, relwidth=0.65, relheight=0.8, anchor='n')
 
@@ -86,5 +90,5 @@ button_20.place(relx=0.60, relwidth=0.20, relheight=1)
 button_400 = tk.Button(lower_frame, text="SR 400", font=("verdana", 14, "bold"), bg="#003082", fg="white", command= write_400)
 button_400.place(relx=0.80, relwidth=0.20, relheight=1)
 
-
+#this marks the end of setting up the the Tk GUI 
 root.mainloop()
